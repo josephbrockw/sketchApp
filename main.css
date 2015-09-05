@@ -1,3 +1,7 @@
+body {
+	margin: 0;
+}
+
 p {
 	text-align: center;
 	font-size: 1.2em;
@@ -25,4 +29,12 @@ p {
 
 .board {
 	display: none;
+
+}
+
+.square {
+	width: 3.05%;
+	border: 1px solid black;
+	height: 2em;
+	display: inline-block;
 }
