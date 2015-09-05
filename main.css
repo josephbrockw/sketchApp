@@ -1,0 +1,28 @@
+p {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.startButton {
+	padding: 1em;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	background-color: red;
+	width: 118px;
+    text-align: center;
+    font-weight: 700;
+    margin: .5em auto;
+    cursor: pointer;
+    font-size: 1.4em;
+}
+
+.startButton:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+.board {
+	display: none;
+}
