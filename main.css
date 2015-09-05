@@ -29,12 +29,10 @@ p {
 
 .board {
 	display: none;
-
 }
 
 .square {
 	width: 3.05%;
-	border: 1px solid black;
 	height: 2em;
 	display: inline-block;
 }

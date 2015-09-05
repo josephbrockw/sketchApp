@@ -1,5 +1,13 @@
 $('document').ready(function() {
-	// var i=1;
+	
+	//Check if mousedown is active
+	var down = false;
+	$(document).mousedown(function() {
+	    down = true;
+	}).mouseup(function() {
+	    down = false;  
+	});
+
 	// Start Drawing button functionality
 	$('.startButton').mouseup(function() {
 		$('.home').hide();
@@ -16,8 +24,11 @@ $('document').ready(function() {
 
 		//Drawing Function
 		$('.square').mouseenter(function() {
-			$(this).css('background-color', 'black');
-			console.log('success');
+			if(down == true) {
+				$(this).css('background-color', 'black');
+				console.log('success');
+			}
+			
 		})
 	}
 
