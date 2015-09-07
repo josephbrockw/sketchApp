@@ -24,11 +24,16 @@ $('document').ready(function() {
 		createBoard();
 	});
 
+	$('#reset').mouseup(function() {
+		$('.drawBoard').empty();
+		createBoard();
+	})
+
 	// Create drawing board
 	function createBoard() {
 		
 		for (i = 0; i < 1024; i++) {
-			$(".board").append("<div class=\"square\"></div>");
+			$(".drawBoard").append("<div class=\"square\"></div>");
 		};
 
 		//Drawing Function
