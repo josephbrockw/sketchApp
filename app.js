@@ -1,12 +1,21 @@
 $('document').ready(function() {
 	
-	//Check if mousedown is active
+	//Check if keydown is active
 	var down = false;
-	$(document).mousedown(function() {
-	    down = true;
-	}).mouseup(function() {
-	    down = false;  
-	});
+	var erase = false;
+	$(document).keydown(function() {
+		if(event.which == 68) {
+			down = true;
+		} else if (event.which == 8) {
+			erase = true;
+		}
+	}).keyup(function() {
+		if(event.which == 68) {
+			down = false;
+		} else if (event.which == 8) {
+			erase = false;
+		}
+	})
 
 	// Start Drawing button functionality
 	$('.startButton').mouseup(function() {
@@ -20,16 +29,19 @@ $('document').ready(function() {
 		
 		for (i = 0; i < 1024; i++) {
 			$(".board").append("<div class=\"square\"></div>");
-		}
+		};
 
 		//Drawing Function
 		$('.square').mouseenter(function() {
 			if(down == true) {
 				$(this).css('background-color', 'black');
-				console.log('success');
+			} else if(erase == true) {
+				$(this).css('background-color', 'white');
 			}
 			
-		})
+		});
+
+
 	}
 
 	// Drawing function
